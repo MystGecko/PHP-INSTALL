@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Script pour installer PHP et ses extensions courantes
+PHP_VERSION=8.1
+EXTENSIONS=(cli fpm common mysql xml mbstring curl zip gd intl bcmath soap readline imap json ldap opcache)
+
+# Installer PHP et les extensions
+sudo apt-get install php$PHP_VERSION php$PHP_VERSION-{${EXTENSIONS[*]}}
